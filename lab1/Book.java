@@ -1,4 +1,4 @@
-package ooplabs;
+package ooplabs.lab1;
 
 public class Book {
     // instance variables
