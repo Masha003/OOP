@@ -1,4 +1,4 @@
-package ooplabs.lab1;
+package ooplabs;
 
 public class Book {
     // instance variables
@@ -9,7 +9,7 @@ public class Book {
     private String ISBN;
 
     // constructor declaration of class
-    public Book(String title, String author, String genre, int publicationYear){
+    public Book(String title, String author, String genre, int publicationYear, String ISBN){
         this.title = title;
         this.author = author;
         this.genre = genre;
