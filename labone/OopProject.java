@@ -7,7 +7,7 @@ public class OopProject {
         System.out.println(book.getTitle());
         System.out.println(book.getAuthor());
         System.out.println(book.getGenre());
-        System.out.println(book.getISBN());
+        System.out.println(book.getisbn());
 
         book.getBookInfo();
 
