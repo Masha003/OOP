@@ -1,4 +1,4 @@
-package ooplabs.labone;
+package labone;
 
 public class OopProject {
     public static void main(String[] args){
