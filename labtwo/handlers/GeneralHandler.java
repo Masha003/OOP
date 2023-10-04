@@ -1,6 +1,5 @@
 package labtwo.handlers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import labtwo.models.StudyField;

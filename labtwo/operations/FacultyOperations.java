@@ -12,8 +12,6 @@ public class FacultyOperations {
     public FacultyOperations(Scanner scanner, List<Faculty> faculties){
         this.faculties = faculties; 
 
-        // FacultyHandler facultyHandler = new FacultyHandler(faculties);
-
         String nextReq = null;
         String[] reqList = null;
         PrintOperations.printFacultyOperations();
