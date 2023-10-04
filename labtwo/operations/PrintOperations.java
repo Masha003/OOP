@@ -37,4 +37,18 @@ public class PrintOperations {
         "q - Quit program\n" + 
         "your input>");
     }
+
+    public static void printFileOperations(){
+        System.out.println("File manager operations\n" +
+        "What do you want to do?\n" +
+        "sd - save data in file\n" +
+        "rd - read data from file\n" +
+        "res - restore data from file\n" +
+        "rs - read all students\n" + 
+        "rg - read graduated students\n" +
+        System.lineSeparator() +
+         "b - back\n" + 
+        "q - Quit program\n" + 
+        "your input>");
+    }
 }

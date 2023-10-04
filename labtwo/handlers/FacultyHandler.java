@@ -25,6 +25,10 @@ public class FacultyHandler {
     }
 
     public static void createStudent(String[] commands){
+        if(commands.length != 8){
+            System.out.println("Not enought parameters.");
+        } 
+
         String facultyAbbrev = commands[1];
         Faculty faculty = findFacultyByAbbrev(facultyAbbrev);
 
@@ -81,6 +85,10 @@ public class FacultyHandler {
     }
 
     public static void displayEnrolledStudents(String[] commands){
+        if(commands.length != 2){
+            System.out.println("Not enought parameters.");
+        }
+
         Faculty faculty = findFacultyByAbbrev(commands[1]);
         if(faculty == null){
             System.out.println("Faculty with abbreviation " + commands[1] + " not found.");
@@ -104,6 +112,10 @@ public class FacultyHandler {
     }
 
     public static void displayGraduatedStudents(String[] commands){
+        if(commands.length != 2){
+            System.out.println("Not enought parameters.");
+        }
+        
         Faculty faculty = findFacultyByAbbrev(commands[1]);
         if(faculty == null){
             System.out.println("Faculty with abbreviation " + commands[1] + " not found.");
