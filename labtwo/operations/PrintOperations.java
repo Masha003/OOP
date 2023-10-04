@@ -12,13 +12,12 @@ public class PrintOperations {
     }
 
     public static void printGeneralOperations(){
-        System.out.println("Faculty operations\n" +
+        System.out.println("General operations\n" +
         "What do you want to do?\n" + 
-        "ns/<faculty abbreviation>/<first name>/<last name>/<email>/<day>/<month>/<year> - create student\n" + 
-        "gs/<email> - graduate student\n" +
-        "ds/<faculty abbreviation> - display enrolled students" +
-        "bf/<faculty abbreviation>/<email> - check if student belongs to faculty" +
-        "dg/<faculty abbreviation> - display graduated students\n" + 
+        "nf/<faculty name>/<faculty abbreviation>/<field> - create faculty\n" + 
+        "ss/<student email> - search student and show faculty\n" +
+        "df - display faculties\n"+
+        "df/field - display all faculties of a field\n" +
         System.lineSeparator() +
         "b - back\n" + 
         "q - Quit program\n" + 
@@ -26,12 +25,13 @@ public class PrintOperations {
     }
 
     public static void printFacultyOperations(){
-        System.out.println("General operations\n" +
+        System.out.println("Faculty operations\n" +
         "What do you want to do?\n" + 
-        "nf/<faculty name>/<faculty abbreviation>/<field> - create faculty\n" + 
-        "ss/<student email> - search student and show faculty\n" +
-        "df - display faculties\n"+
-        " df/field - display all faculties of a field\n" +
+        "ns/<faculty abbreviation>/<first name>/<last name>/<email>/<day>/<month>/<year> - create student\n" + 
+        "gs/<email> - graduate student\n" +
+        "ds/<faculty abbreviation> - display enrolled students" +
+        "bf/<faculty abbreviation>/<email> - check if student belongs to faculty" +
+        "dg/<faculty abbreviation> - display graduated students\n" + 
         System.lineSeparator() +
         "b - back\n" + 
         "q - Quit program\n" + 

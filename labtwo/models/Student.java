@@ -59,7 +59,11 @@ public class Student {
         this.enrollmentDate = enrollDate;
     }
 
-     public void setDateOfBirth(Date birthDate){
+    public void setDateOfBirth(Date birthDate){
         this.enrollmentDate = birthDate;
+    }
+
+    public void setGraduation(boolean grad){
+        this.graduated = grad;
     }
 }

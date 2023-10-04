@@ -16,8 +16,8 @@ public class Faculty {
         this.studyField = studyField;
     }
 
-    public Faculty(String facultyName, String facultyAbbreviation, ArrayList<Object> objects, StudyField studyField) {
-    }
+    // public Faculty(String facultyName, String facultyAbbreviation, ArrayList<Object> objects, StudyField studyField) {
+    // }
 
     public String getName(){
         return name;
@@ -43,11 +43,19 @@ public class Faculty {
         this.abbreviation = abbrev;
     }
 
-    public void setStudents(List<Student> students){
-        this.students = students;
-    }
-
     public void setStudyField(StudyField studyField){
         this.studyField = studyField;
-    }    
+    }   
+
+    public void enrollStudent(Student student){
+        students.add(student);
+    }
+
+    public void graduateStudent(Student student){
+        student.setGraduation(true);
+    }
+
+    public boolean isStudentEnrolled(Student student){
+        return students.contains(student);
+    }
 }
