@@ -12,9 +12,26 @@ import labtwo.models.Student;
 public class FacultyHandler {
     private static List<Faculty> faculties = new ArrayList<>();
 
+    public void setFaculties(List<Faculty> faculties){
+        FacultyHandler.faculties = faculties;
+    }
+
+    public void addFaculty(Faculty faculty) {
+        faculties.add(faculty);
+    }
+
+    public List<Faculty> getFaculties() {
+        return faculties;
+    }
+
     public static void createStudent(String[] commands){
         String facultyAbbrev = commands[1];
         Faculty faculty = findFacultyByAbbrev(facultyAbbrev);
+
+        if (faculty == null) {
+            System.out.println("Faculty with abbreviation " + facultyAbbrev + " not found.");
+            return;
+        }
 
         String firstName = commands[2];
         String lastName = commands[3];

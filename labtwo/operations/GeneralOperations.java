@@ -1,12 +1,17 @@
 package labtwo.operations;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
 import labtwo.handlers.GeneralHandler;
+import labtwo.models.Faculty;
 
 public class GeneralOperations {
-    public GeneralOperations(Scanner scanner){
+    private List<Faculty> faculties;
+
+    public GeneralOperations(Scanner scanner, List<Faculty> faculties){
+        this.faculties = faculties; 
         String nextReq = null;
         String[] reqList = null;
         while(!Objects.equals(nextReq, "b")){
