@@ -2,8 +2,6 @@ package labtwo.operations;
 
 import java.util.Scanner;
 
-import labtwo.handlers.FacultyHandler;
-
 public class FileOperations {
     public FileOperations(Scanner scanner){
         String nextReq = null;
