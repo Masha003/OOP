@@ -3,7 +3,7 @@ package labtwo;
 import java.util.Objects;
 import java.util.Scanner;
 
-import labtwo.handlers.GeneralHandler;
+import labtwo.operations.FacultyOperations;
 import labtwo.operations.GeneralOperations;
 import labtwo.operations.PrintOperations;
 
@@ -23,7 +23,7 @@ public class Main {
                     new GeneralOperations(scan);
                     break;
                 case "f":
-                    PrintOperations.printFacultyOperations();
+                    new FacultyOperations(scan);
                     break;
                 case "q":
                     System.exit(0);
