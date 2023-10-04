@@ -1,35 +1,26 @@
 package labtwo.operations;
 
+import java.util.List;
 import java.util.Scanner;
+
+import labtwo.handlers.FacultyHandler;
+import labtwo.handlers.FileHandler;
+import labtwo.models.Faculty;
 
 public class FileOperations {
     public FileOperations(Scanner scanner){
         String nextReq = null;
         String[] reqList = null;
-        PrintOperations.printFacultyOperations();
+        PrintOperations.printFileOperations();
         nextReq = scanner.nextLine();
         reqList = nextReq.split("/");
 
         switch(reqList[0]){
             case "sd":
-                // FacultyHandler.createStudent(reqList);
-                // save data function
+                saveData();
                 break;
-            case "rd":
-                // read data from file
-                // FacultyHandler.graduateStudent(reqList);
-                break;
-            case "res": 
-                // restore data from file
-                // FacultyHandler.displayEnrolledStudents(reqList);
-                break;
-            case "rs": 
-                // read all students from file
-                // FacultyHandler.displayGraduatedStudents(reqList);
-                break;
-            case "rg": 
-                // read graduated students from file
-                // FacultyHandler.checkStudent(reqList);
+            case "ld":
+                FileHandler.loadData();
                 break;
             case "b":
                 break;
@@ -40,5 +31,12 @@ public class FileOperations {
                 System.out.println("Invalid command. \n");
                 break;
         }
+    }
+
+    private void saveData() {
+        FacultyHandler facultyHandler = new FacultyHandler();
+        List<Faculty> faculties = facultyHandler.getFaculties();
+        FileHandler.saveData(faculties);
+        System.out.println("Data saved successfully.");
     }
 }

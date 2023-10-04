@@ -6,9 +6,9 @@ import java.util.Objects;
 import java.util.Scanner;
 
 import labtwo.operations.FacultyOperations;
+import labtwo.operations.FileOperations;
 import labtwo.operations.GeneralOperations;
 import labtwo.operations.PrintOperations;
-
 import labtwo.models.Faculty;
 
 public class Main {
@@ -30,6 +30,9 @@ public class Main {
                     break;
                 case "f":
                     new FacultyOperations(scan, faculties);
+                    break;
+                case "d":
+                    new FileOperations(scan);
                     break;
                 case "q":
                     System.exit(0);

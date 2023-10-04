@@ -6,6 +6,7 @@ public class PrintOperations {
         "What do you want to do?\n" + 
         "g - General operations\n" + 
         "f - Faculty operations\n" +
+        "d - Data operations\n" +
         System.lineSeparator() +
         "q - Quit program\n" + 
         "your input>");
