@@ -29,9 +29,9 @@ public class PrintOperations {
         "What do you want to do?\n" + 
         "ns/<faculty abbreviation>/<first name>/<last name>/<email>/<day>/<month>/<year> - create student\n" + 
         "gs/<email> - graduate student\n" +
-        "ds/<faculty abbreviation> - display enrolled students" +
-        "bf/<faculty abbreviation>/<email> - check if student belongs to faculty" +
+        "ds/<faculty abbreviation> - display enrolled students\n" +
         "dg/<faculty abbreviation> - display graduated students\n" + 
+        "bf/<faculty abbreviation>/<email> - check if student belongs to faculty\n" +
         System.lineSeparator() +
         "b - back\n" + 
         "q - Quit program\n" + 
