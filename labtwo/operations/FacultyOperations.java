@@ -1,16 +1,11 @@
 package labtwo.operations;
-
-import java.util.List;
 import java.util.Scanner;
 
 import labtwo.handlers.FacultyHandler;
-import labtwo.models.Faculty;
 
 public class FacultyOperations {
-    private List<Faculty> faculties;
 
-    public FacultyOperations(Scanner scanner, List<Faculty> faculties){
-        this.faculties = faculties; 
+    public FacultyOperations(Scanner scanner){
 
         String nextReq = null;
         String[] reqList = null;

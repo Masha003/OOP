@@ -67,4 +67,9 @@ public class Student implements Serializable{
     public void setGraduation(boolean grad){
         this.graduated = grad;
     }
+
+    @Override
+    public String toString(){
+        return firstName + " " + lastName + " - " + email + " date: " + dateOfBirth;
+    }
 }

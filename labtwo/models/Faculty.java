@@ -59,4 +59,9 @@ public class Faculty implements Serializable{
     public boolean isStudentEnrolled(Student student){
         return students.contains(student);
     }
+
+    @Override
+    public String toString(){
+        return name + " - " + abbreviation + " - " + studyField;
+    }
 }

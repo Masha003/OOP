@@ -101,7 +101,7 @@ public class FacultyHandler {
         }
 
         StringBuilder studentsString = new StringBuilder();
-        studentsString.append("Students from " + faculty.getName() + " ");
+        studentsString.append("Students from " + faculty.getName() + " \n");
         System.lineSeparator();
         for(Student student : faculty.getStudents()){
             studentsString.append(student);

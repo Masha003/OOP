@@ -29,7 +29,7 @@ public class FileHandler {
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(FILE_PATH))) {
             faculties = (List<Faculty>) inputStream.readObject();
             System.out.println("Data loaded from " + FILE_PATH);
-            return faculties;
+            // return faculties;
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
             System.err.println("Error loading data: " + e.getMessage());

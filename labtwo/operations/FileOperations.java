@@ -19,7 +19,7 @@ public class FileOperations {
             case "sd":
                 saveData();
                 break;
-            case "ld":
+            case "rd":
                 FileHandler.loadData();
                 break;
             case "b":
