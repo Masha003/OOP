@@ -92,6 +92,11 @@ public class FileHandler {
         }
     }
 
+    public void commitChanges() {
+        lastSnapshotTime = System.currentTimeMillis();
+        System.out.println("Snapshot time updated: " + Utils.formatTime(lastSnapshotTime));
+    }
+
     private Document findDocByName(String fileName) {
         return docs.stream()
                 .filter(doc -> doc.getName().equals(fileName))
