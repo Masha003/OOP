@@ -58,6 +58,11 @@ public class TextFile extends Document {
         return characterCount;
     }
 
+    @Override
+    public String getInformation() {
+        return super.getInformation() + "\nLine count: " + getLineCount() + "\nWord count: " + getWordCount() + "\nCharacter count: " + getCharacterCount();
+    }
+
 
 
 
