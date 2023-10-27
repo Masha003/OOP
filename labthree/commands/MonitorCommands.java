@@ -6,12 +6,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.Path;
 
-import labthree.handlers.FileHandler;
+import labthree.handlers.FilesHandler;
 
 public class MonitorCommands {
 
     public MonitorCommands(Path path) {
-        FileHandler fh = new FileHandler(path);
+        FilesHandler fh = new FilesHandler(path);
 
         try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             String command;

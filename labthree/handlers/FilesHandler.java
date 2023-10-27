@@ -18,14 +18,14 @@ import labthree.models.Image;
 import labthree.models.ScriptFile;
 
 
-public class FileHandler {
+public class FilesHandler {
     private Path folderPath;
     private long lastSnapshotTime;
 
     private List<Document> docs;
     private WatchService watchService;
 
-    public FileHandler(Path path) {
+    public FilesHandler(Path path) {
         this.folderPath = path;
         this.lastSnapshotTime = System.currentTimeMillis();
         this.docs = new ArrayList<>();
