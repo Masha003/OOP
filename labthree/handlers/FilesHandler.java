@@ -40,6 +40,13 @@ public class FilesHandler {
         populateDocuments();
     }
 
+    // public FilesHandler(String string, WatchService watchService2) {
+    // }
+
+    // public WatchService getWatchService() {
+    //     return watchService;
+    // }
+
     private void populateDocuments() {
         try(DirectoryStream<Path> stream = Files.newDirectoryStream(folderPath)) {
             for(Path path : stream) {
@@ -140,5 +147,5 @@ public class FilesHandler {
         }
         
         docs.removeAll(files);
-    }        
+    }    
 }

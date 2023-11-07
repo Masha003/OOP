@@ -17,7 +17,9 @@ public class MonitorCommands {
             String command;
 
             while(true) {
-                System.out.println("File manager operations\n" +
+                System.out.println(
+                System.lineSeparator() +
+                "File manager operations\n" +
                 "What do you want to do?\n" +
                 "commit\n" +
                 "info <filename>\n" +
