@@ -46,4 +46,23 @@ public class ArrayStack<T> implements Stack<T> {
     public boolean isFull() {
         return top == CAPACITY - 1;
     }
+
+    @Override
+    public String toString() {
+        if(isEmpty()) {
+            return "The stack is empty. \n";
+        } else {
+            StringBuilder sb = new StringBuilder();
+            sb.append("[");
+            for (int i = 0; i <= top; i++) {
+                sb.append(elements[i].toString());
+                if (i < top) {
+                    sb.append(", ");
+                }
+            }
+            sb.append("]");
+            return sb.toString();
+        }
+    }
+
 }

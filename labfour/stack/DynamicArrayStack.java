@@ -61,4 +61,18 @@ public class DynamicArrayStack<T> implements Stack<T> {
             elements = newElements;
         }
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i <= top; i++) {
+            sb.append(elements[i].toString());
+            if (i < top) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
 }

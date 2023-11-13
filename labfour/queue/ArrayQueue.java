@@ -56,5 +56,17 @@ public class ArrayQueue<T> implements Queue<T> {
         return size == CAPACITY;
     }
     
-    
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < size; i++) {
+            sb.append(elements[(front + i) % elements.length].toString());
+            if (i < size - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
 }

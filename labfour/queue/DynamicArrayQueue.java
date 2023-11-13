@@ -73,5 +73,18 @@ public class DynamicArrayQueue<T> implements Queue<T> {
         front = 0;
         rear = size - 1;
     }
-    
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < size; i++) {
+            sb.append(elements[(front + i) % elements.length].toString());
+            if (i < size - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
 }
