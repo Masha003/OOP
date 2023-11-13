@@ -140,5 +140,5 @@ public class FilesHandler {
         }
         
         docs.removeAll(files);
-    }        
+    }    
 }

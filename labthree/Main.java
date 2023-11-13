@@ -8,10 +8,12 @@ public class Main {
     public static void main(String[] args) {
         Path path = Path.of("/Users/mashacolta/Desktop/test");
 
-        Thread consoleThread = new Thread(() -> {
+        Thread thread = new Thread(() -> {
             new MonitorCommands(path);
         });
-        consoleThread.start();
+        thread.start();
     }
+
+    // ScheduledExecutorService schedule = Executors.newScheduledThreadPool(1);
     
 }
