@@ -6,6 +6,8 @@ import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardWatchEventKinds;
+import java.nio.file.WatchEvent;
+import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
 import java.util.ArrayList;
 import java.util.List;
@@ -140,5 +142,58 @@ public class FilesHandler {
         }
         
         docs.removeAll(files);
-    }    
+    }
+
+    public void checkChanges() {
+        System.out.println("Checking for file changes...");
+        // try {
+        //     WatchKey key = watchService.poll();
+        //     if (key != null) {
+        //         for (WatchEvent<?> event : key.pollEvents()) {
+        //             WatchEvent.Kind<?> kind = event.kind();
+        //             Path changed = (Path) event.context();
+        //             System.out.println("Change detected: " + kind.name() + " in file: " + changed);
+        //         }
+        //         key.reset();
+        //     }
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+        try {
+            WatchKey key = watchService.poll();
+            if (key != null) {
+                for (WatchEvent<?> event : key.pollEvents()) {
+                    WatchEvent.Kind<?> kind = event.kind();
+    
+                    // Overflow event is not an actual file change
+                    if (kind == StandardWatchEventKinds.OVERFLOW) {
+                        continue;
+                    }
+    
+                    // Context for directory entry event is the file name of entry
+                    WatchEvent<Path> ev = (WatchEvent<Path>)event;
+                    Path filename = ev.context();
+    
+                    System.out.println("File " + filename + ": " + kind.name());
+                    handleEvent(kind, folderPath.resolve(filename));
+                }
+                key.reset();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void handleEvent(WatchEvent.Kind<?> kind, Path filePath) {
+        if (kind == StandardWatchEventKinds.ENTRY_CREATE) {
+            System.out.println("File created: " + filePath);
+            // Handle file creation event
+        } else if (kind == StandardWatchEventKinds.ENTRY_DELETE) {
+            System.out.println("File deleted: " + filePath);
+            // Handle file deletion event
+        } else if (kind == StandardWatchEventKinds.ENTRY_MODIFY) {
+            System.out.println("File modified: " + filePath);
+            // Handle file modification event
+        }
+    }
 }
