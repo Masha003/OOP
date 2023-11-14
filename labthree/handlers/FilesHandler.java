@@ -146,19 +146,6 @@ public class FilesHandler {
 
     public void checkChanges() {
         System.out.println("Checking for file changes...");
-        // try {
-        //     WatchKey key = watchService.poll();
-        //     if (key != null) {
-        //         for (WatchEvent<?> event : key.pollEvents()) {
-        //             WatchEvent.Kind<?> kind = event.kind();
-        //             Path changed = (Path) event.context();
-        //             System.out.println("Change detected: " + kind.name() + " in file: " + changed);
-        //         }
-        //         key.reset();
-        //     }
-        // } catch (Exception e) {
-        //     e.printStackTrace();
-        // }
         try {
             WatchKey key = watchService.poll();
             if (key != null) {
@@ -187,13 +174,10 @@ public class FilesHandler {
     private void handleEvent(WatchEvent.Kind<?> kind, Path filePath) {
         if (kind == StandardWatchEventKinds.ENTRY_CREATE) {
             System.out.println("File created: " + filePath);
-            // Handle file creation event
         } else if (kind == StandardWatchEventKinds.ENTRY_DELETE) {
             System.out.println("File deleted: " + filePath);
-            // Handle file deletion event
         } else if (kind == StandardWatchEventKinds.ENTRY_MODIFY) {
             System.out.println("File modified: " + filePath);
-            // Handle file modification event
         }
     }
 }
