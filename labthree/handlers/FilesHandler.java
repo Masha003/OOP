@@ -158,6 +158,8 @@ public class FilesHandler {
                     }
     
                     // Context for directory entry event is the file name of entry
+                    
+                    @SuppressWarnings("unchecked")
                     WatchEvent<Path> ev = (WatchEvent<Path>)event;
                     Path filename = ev.context();
     
